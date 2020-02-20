@@ -1,0 +1,20 @@
+name: flutter_barcode_scanner_web
+version: 0.0.1
+
+flutter:
+  plugin:
+    platforms:
+      web:
+        pluginClass: FlutterBarcodeScannerWeb
+        fileName: flutter_barcode_scanner_web.dart
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  flutter_barcode_scanner: ^0.1.7
+
+environment:
+  sdk: ">=2.5.0 <3.0.0"
+  flutter:
