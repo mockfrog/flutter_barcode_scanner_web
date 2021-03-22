@@ -7,14 +7,12 @@ import 'stub.dart'
     if (dart.library.io) 'flutter_barcode_scanner_interface.dart';
 
 class FlutterBarcodeScannerWrapper {
-  static Future<String> scanBarcode(BuildContext context,
-      [String cancelLabel]) async {
+  static Future<String> scanBarcode({@required BuildContext context, @required String cancelLabel}) async {
     if (kIsWeb) {
       //ignore: undefined_method
       return internalScanBarcode(context);
     } else {
-      return FlutterBarcodeScanner.scanBarcode(
-          "#ff0000", cancelLabel, false, null);
+      return FlutterBarcodeScanner.scanBarcode("#ff0000", cancelLabel, false, ScanMode.QR);
     }
   }
 }

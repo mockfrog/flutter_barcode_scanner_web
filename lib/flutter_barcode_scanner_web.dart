@@ -10,7 +10,7 @@ Future<String> internalScanBarcode(BuildContext context) async {
   FlutterBarcodeScannerWeb._initBarcodeScanner();
   return await showDialog(
     context: context,
-    child: FlutterBarcodeScannerWeb(),
+    builder: (context) => FlutterBarcodeScannerWeb(),
   );
 }
 
